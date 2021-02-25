@@ -1,47 +1,205 @@
+;Coverted using MIDI2ASM
+;Code by TriteHexagon
+;Version 5.0.1 (7-Feb-2021)
+;Visit github.com/TriteHexagon/Midi2ASM-Converter for up-to-date versions.
+
+; ============================================================================================================
+
 Music_RuinsOfAlphInterior:
-	channel_count 3
+	channel_count 4
 	channel 1, Music_RuinsOfAlphInterior_Ch1
 	channel 2, Music_RuinsOfAlphInterior_Ch2
 	channel 3, Music_RuinsOfAlphInterior_Ch3
+	channel 4, Music_RuinsOfAlphInterior_Ch4
 
 Music_RuinsOfAlphInterior_Ch1:
-	tempo 224
 	volume 7, 7
-	duty_cycle 0
-	stereo_panning TRUE, FALSE
-	note_type 12, 4, 4
-	rest 1
-	sound_loop 0, Music_RuinsOfAlphInterior_Ch2.mainloop
+	duty_cycle 2
+	note_type 12, 10, 7
+	tempo 201
+.mainloop:
+;Bar 1
+	rest 4
+	octave 4
+	volume_envelope 13, 7
+	note C_, 2
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 2
+	note C_, 6
+	octave 3
+	note A#, 1
+	octave 4
+	note D_, 1
+	note C_, 4
+	rest 8
+;Bar 3
+	note C_, 2 ; WARNING: Auto-Sync says: Rounded up!
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 4
+	note F#, 8
+	note F#, 1
+	note F_, 2
+	note D#, 1
+	note F#, 1
+	note F_, 2
+	note D#, 1 ; WARNING: Auto-Sync says: Rounded up!
+;Bar 5
+	rest 4
+	note C_, 2
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 6
+	note C_, 6
+	octave 3
+	note A#, 1
+	octave 4
+	note D_, 1
+	note C_, 4
+	rest 8
+;Bar 7
+	note C_, 2
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 8
+	note F#, 8
+	note F#, 1
+	note F_, 2
+	note D#, 1
+	note F#, 1
+	note F_, 2
+	note D#, 1
+	sound_loop 0, .mainloop
+
+; ============================================================================================================
 
 Music_RuinsOfAlphInterior_Ch2:
-	pitch_offset 2
-	duty_cycle 0
-	stereo_panning FALSE, TRUE
-	note_type 12, 10, 4
+	duty_cycle 1
+	note_type 12, 10, 7
 .mainloop:
-	octave 4
+;Bar 1
+	rest 16
+	rest 16
+	rest 16
+	rest 16
+;Bar 5
+	octave 2
+	volume_envelope 6, 7
 	note C_, 4
-	octave 3
-	note A#, 4
-	octave 4
-	note C#, 2
+	rest 6
+	note C_, 6
+;Bar 6
+	note C_, 4
+	rest 6
+	note C_, 3
+	octave 1
+	volume_envelope 4, 7
+	note A#, 1
+	note G_, 2
+;Bar 7
+	octave 2
+	volume_envelope 6, 7
+	note C_, 4
+	rest 6
+	note D#, 6
+;Bar 8
+	note F#, 4
+	volume_envelope 4, 7
+	note F#, 3
+	note F#, 1
+	rest 1
+	note F#, 1
+	volume_envelope 6, 7
+	note F#, 2
+	volume_envelope 4, 7
 	note D#, 2
 	note C_, 2
-	octave 3
-	note A#, 2
-	octave 4
-	note C_, 4
-	octave 3
-	note A#, 4
 	sound_loop 0, .mainloop
+
+; ============================================================================================================
 
 Music_RuinsOfAlphInterior_Ch3:
 	note_type 12, 1, 0
 .mainloop:
-	octave 2
-	note G#, 2
+;Bar 1
 	octave 3
-	note C#, 2
-	note E_, 2
+	volume_envelope 1, 0
+	note C_, 4
+	rest 16
 	rest 10
+;Bar 2
+	octave 2
+	note G_, 2
+;Bar 3
+	octave 3
+	note C_, 4
+	rest 16
+	rest 8
+;Bar 4
+	octave 4
+	note C_, 4
+;Bar 5
+	octave 3
+	note C_, 4
+	rest 16
+	rest 10
+;Bar 6
+	octave 2
+	note G_, 2
+;Bar 7
+	octave 3
+	note C_, 4
+	rest 16
+	rest 8
+;Bar 8
+	octave 4
+	note C_, 4
 	sound_loop 0, .mainloop
+
+; ============================================================================================================
+
+Music_RuinsOfAlphInterior_Ch4:
+	toggle_noise 1
+	drum_speed 12
+.mainloop:
+;Bar 1
+	drum_note 1, 4
+	rest 16
+	rest 10
+;Bar 2
+	drum_note 8, 2
+;Bar 3
+	drum_note 1, 4
+	rest 16
+	rest 8
+;Bar 4
+	drum_note 1, 4
+;Bar 5
+	drum_note 1, 4
+	rest 16
+	rest 10
+;Bar 6
+	drum_note 8, 2
+;Bar 7
+	drum_note 1, 4
+	rest 16
+	rest 8
+;Bar 8
+	drum_note 1, 4
+	sound_loop 0, .mainloop
+
+; ============================================================================================================
+

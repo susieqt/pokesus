@@ -1,3 +1,10 @@
+;Coverted using MIDI2ASM
+;Code by TriteHexagon
+;Version 5.0.1 (7-Feb-2021)
+;Visit github.com/TriteHexagon/Midi2ASM-Converter for up-to-date versions.
+
+; ============================================================================================================
+
 Music_PokemonCenter:
 	channel_count 4
 	channel 1, Music_PokemonCenter_Ch1
@@ -6,400 +13,193 @@ Music_PokemonCenter:
 	channel 4, Music_PokemonCenter_Ch4
 
 Music_PokemonCenter_Ch1:
-	tempo 152
 	volume 7, 7
 	duty_cycle 2
-	vibrato 10, 1, 4
-	pitch_offset 1
+	note_type 12, 10, 7
+	tempo 201
 .mainloop:
-	stereo_panning FALSE, TRUE
-	note_type 12, 8, 3
-	octave 3
-	note F#, 2
+;Bar 1
+	rest 4
+	octave 4
+	volume_envelope 13, 7
+	note C_, 2
+	note D#, 2
 	note F_, 2
 	note F#, 2
-	octave 4
-	note D_, 4
-	note C#, 2
+	note F_, 2
+	note D#, 2
+;Bar 2
+	note C_, 6
 	octave 3
-	note B_, 2
-	note A_, 2
-	note B_, 2
-	note A_, 2
-	note G_, 2
-	note F#, 2
-	note E_, 2
-	note F#, 2
-	note G_, 2
-	note A_, 2
-	note A_, 2
-	note E_, 2
-	note A_, 2
+	note A#, 1
 	octave 4
-	note C#, 4
-	octave 3
-	note B_, 2
-	note A_, 2
-	note G_, 2
-	note F#, 2
-	note A_, 2
-	note B_, 2
-	octave 4
-	note C#, 2
-	note D_, 2
-	note C#, 2
-	octave 3
-	note B_, 2
-	note A_, 2
-	note F#, 2
+	note D_, 1
+	note C_, 4
+	rest 8
+;Bar 3
+	note C_, 2 ; WARNING: Auto-Sync says: Rounded up!
+	note D#, 2
 	note F_, 2
 	note F#, 2
-	octave 4
-	note D_, 4
-	note C#, 2
+	note F_, 2
+	note D#, 2
+;Bar 4
+	note F#, 8
+	note F#, 1
+	note F_, 2
+	note D#, 1
+	note F#, 1
+	note F_, 2
+	note D#, 1 ; WARNING: Auto-Sync says: Rounded up!
+;Bar 5
+	rest 4
+	note C_, 2
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 6
+	note C_, 6
 	octave 3
-	note B_, 2
-	note A_, 2
-	note B_, 2
-	note A_, 2
-	note G_, 2
-	note F#, 2
-	note E_, 2
-	note F#, 2
-	note G_, 2
-	note A_, 2
-	note A_, 2
-	note E_, 2
-	note A_, 2
+	note A#, 1
 	octave 4
-	note C#, 4
-	octave 3
-	note B_, 2
-	note A_, 2
-	note G_, 2
-	note_type 12, 11, 4
+	note D_, 1
+	note C_, 4
+	rest 8
+;Bar 7
+	note C_, 2
+	note D#, 2
+	note F_, 2
 	note F#, 2
-	note E_, 2
-	note D_, 2
-	note E_, 2
-	note F#, 2
-	note G_, 2
-	note A_, 2
-	note B_, 2
-	stereo_panning TRUE, FALSE
-	note F#, 2
-	note E_, 2
-	note D_, 4
-	note E_, 2
-	note F#, 2
-	note G_, 2
-	note A_, 2
-	note B_, 2
-	note A_, 2
-	note G_, 4
-	note E_, 2
-	note F#, 2
-	note G_, 2
-	note A_, 2
-	note G_, 2
-	note F#, 2
-	note E_, 4
-	note C#, 2
-	note D_, 2
-	note E_, 2
-	note G_, 2
-	note F#, 2
-	note G_, 2
-	note A_, 2
-	note B_, 2
-	note A_, 8
-	octave 4
-	note D_, 2
-	note C#, 2
-	octave 3
-	note B_, 4
-	note A_, 2
-	note B_, 2
-	octave 4
-	note C#, 2
-	note D_, 2
-	note E_, 2
-	note D_, 2
-	note C#, 4
-	octave 3
-	note B_, 2
-	octave 4
-	note C#, 2
-	note D_, 2
-	note E_, 2
-	note C#, 2
-	octave 3
-	note B_, 2
-	note A_, 4
-	note G_, 2
-	note A_, 2
-	note B_, 2
-	note G_, 2
-	note A_, 2
-	note G_, 2
-	note F#, 2
-	note E_, 2
-	note D_, 2
-	note E_, 2
-	note F#, 2
-	note G_, 2
+	note F_, 2
+	note D#, 2
+;Bar 8
+	note F#, 8
+	note F#, 1
+	note F_, 2
+	note D#, 1
+	note F#, 1
+	note F_, 2
+	note D#, 1
 	sound_loop 0, .mainloop
+
+; ============================================================================================================
 
 Music_PokemonCenter_Ch2:
-	vibrato 16, 2, 5
+	duty_cycle 1
+	note_type 12, 10, 7
 .mainloop:
-	stereo_panning TRUE, TRUE
-	sound_call .sub1
-	stereo_panning FALSE, TRUE
-	note_type 12, 10, 5
-	octave 3
-	note A_, 4
-	note E_, 4
-	stereo_panning TRUE, TRUE
-	sound_call .sub2
-	note D_, 2
-	note F#, 6
-	stereo_panning FALSE, TRUE
-	note_type 12, 10, 5
-	octave 3
-	note A_, 4
-	note E_, 4
-	stereo_panning TRUE, TRUE
-	sound_call .sub1
-	stereo_panning FALSE, TRUE
-	note_type 12, 10, 5
-	octave 3
-	note A_, 4
-	note E_, 4
-	stereo_panning TRUE, TRUE
-	sound_call .sub2
-	note D_, 8
-	stereo_panning FALSE, TRUE
-	note_type 12, 10, 5
-	octave 3
-	note D_, 4
-	note E_, 4
-	note_type 12, 12, 6
-	octave 4
-	note F#, 8
-	note A_, 8
+;Bar 1
+	rest 16
+	rest 16
+	rest 16
+	rest 16
+;Bar 5
+	octave 2
+	volume_envelope 6, 7
+	note C_, 4
+	rest 6
+	note C_, 6
+;Bar 6
+	note C_, 4
+	rest 6
+	note C_, 3
+	octave 1
+	volume_envelope 4, 7
+	note A#, 1
 	note G_, 2
-	note A_, 2
-	note G_, 2
+;Bar 7
+	octave 2
+	volume_envelope 6, 7
+	note C_, 4
+	rest 6
+	note D#, 6
+;Bar 8
+	note F#, 4
+	volume_envelope 4, 7
+	note F#, 3
+	note F#, 1
+	rest 1
+	note F#, 1
+	volume_envelope 6, 7
 	note F#, 2
-	note E_, 8
-	note C#, 8
-	note E_, 8
-	note F#, 2
-	note G_, 2
-	note F#, 2
-	note E_, 2
-	note D_, 8
-	note F#, 8
-	note A_, 8
-	note G_, 2
-	note F#, 2
-	note G_, 2
-	note A_, 2
-	note B_, 8
-	note A_, 4
-	note G_, 2
-	note F#, 2
-	note G_, 8
-	note F#, 2
-	note G_, 2
-	note F#, 2
-	note E_, 2
-	note D_, 8
+	volume_envelope 4, 7
+	note D#, 2
+	note C_, 2
 	sound_loop 0, .mainloop
 
-.sub1:
-	duty_cycle 2
-	note_type 12, 12, 2
-	octave 4
-	note D_, 2
-	octave 3
-	note A_, 2
-	octave 4
-	note D_, 2
-	volume_envelope 12, 3
-	note A_, 4
-	note G_, 4
-	note F#, 2
-	note E_, 2
-	note C#, 6
-	sound_ret
-
-.sub2:
-	note_type 12, 12, 2
-	octave 4
-	note C#, 2
-	octave 3
-	note A_, 2
-	octave 4
-	note C#, 2
-	volume_envelope 12, 3
-	note F#, 4
-	note E_, 4
-	note C#, 2
-	sound_ret
+; ============================================================================================================
 
 Music_PokemonCenter_Ch3:
-	note_type 12, 2, 8
+	note_type 12, 1, 0
 .mainloop:
-	stereo_panning TRUE, FALSE
+;Bar 1
 	octave 3
-	note D_, 1
-	rest 5
-	note F#, 1
-	rest 3
-	note F#, 1
-	rest 1
-	note G_, 1
-	rest 1
-	note F#, 1
-	rest 1
-	sound_call .sub1
-	sound_call .sub2
-	note F#, 1
-	rest 5
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 1
-	note G_, 1
-	rest 1
-	note A_, 1
-	rest 1
-	note D_, 1
-	rest 5
-	note F#, 1
-	rest 3
-	note F#, 1
-	rest 1
-	note G_, 1
-	rest 1
-	note F#, 1
-	rest 1
-	sound_call .sub1
-	sound_call .sub2
-	note D_, 1
-	rest 5
-	note F#, 1
-	rest 3
-	note F#, 1
-	rest 1
-	note D_, 1
-	rest 1
-	note G_, 1
-	rest 1
-	stereo_panning TRUE, TRUE
-	sound_call .sub3
-	note G_, 1
-	rest 5
-	note B_, 1
-	rest 3
-	note B_, 1
-	rest 1
-	note G_, 1
-	rest 1
-	note B_, 1
-	rest 1
-	note E_, 1
-	rest 5
-	note G_, 1
-	rest 3
-	note G_, 1
-	rest 3
-	note G_, 1
-	rest 1
-	note F#, 1
-	rest 5
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 1
-	note G#, 1
-	rest 1
-	note A_, 1
-	rest 1
-	sound_call .sub3
-	note G_, 1
-	rest 5
-	note B_, 1
-	rest 3
-	note B_, 1
-	rest 3
-	note B_, 1
-	rest 1
-	note E_, 1
-	rest 5
-	note G_, 1
-	rest 3
-	note G_, 1
-	rest 3
-	note G_, 1
-	rest 1
-	note F#, 1
-	rest 5
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 1
-	note G_, 1
-	rest 1
-	note E_, 1
-	rest 1
+	volume_envelope 1, 0
+	note C_, 4
+	rest 16
+	rest 10
+;Bar 2
+	octave 2
+	note G_, 2
+;Bar 3
+	octave 3
+	note C_, 4
+	rest 16
+	rest 8
+;Bar 4
+	octave 4
+	note C_, 4
+;Bar 5
+	octave 3
+	note C_, 4
+	rest 16
+	rest 10
+;Bar 6
+	octave 2
+	note G_, 2
+;Bar 7
+	octave 3
+	note C_, 4
+	rest 16
+	rest 8
+;Bar 8
+	octave 4
+	note C_, 4
 	sound_loop 0, .mainloop
 
-.sub1:
-	note E_, 1
-	rest 5
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 1
-	sound_ret
-
-.sub2:
-	note E_, 1
-	rest 5
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 1
-	note G_, 1
-	rest 1
-	note A_, 1
-	rest 1
-	sound_ret
-
-.sub3:
-	note F#, 1
-	rest 5
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 3
-	note A_, 1
-	rest 1
-	sound_ret
+; ============================================================================================================
 
 Music_PokemonCenter_Ch4:
-	toggle_noise 3
+	toggle_noise 1
 	drum_speed 12
-	stereo_panning TRUE, TRUE
 .mainloop:
-	drum_note 8, 6
-	drum_note 8, 4
+;Bar 1
+	drum_note 1, 4
+	rest 16
+	rest 10
+;Bar 2
 	drum_note 8, 2
+;Bar 3
+	drum_note 1, 4
+	rest 16
+	rest 8
+;Bar 4
+	drum_note 1, 4
+;Bar 5
+	drum_note 1, 4
+	rest 16
+	rest 10
+;Bar 6
 	drum_note 8, 2
-	drum_note 8, 2
+;Bar 7
+	drum_note 1, 4
+	rest 16
+	rest 8
+;Bar 8
+	drum_note 1, 4
 	sound_loop 0, .mainloop
+
+; ============================================================================================================
+

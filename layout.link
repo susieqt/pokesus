@@ -120,13 +120,11 @@ ROMX $2b
 	"Map Blocks 2"
 ROMX $2e
 	"Pics 14"
-	org $6300
 	"bank2E_2"
 ROMX $30
 	"Sprites 1"
 ROMX $31
 	"Sprites 2"
-	org $7a40
 	"bank31_2"
 ROMX $32
 	"bank32"

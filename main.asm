@@ -275,7 +275,6 @@ SECTION "bank2E_2", ROMX
 INCLUDE "engine/events/checkforhiddenitems.asm"
 INCLUDE "engine/events/treemons.asm"
 INCLUDE "engine/pokegear/radio.asm"
-INCLUDE "engine/pokemon/mail_2.asm"
 
 
 SECTION "bank31_2", ROMX
@@ -428,6 +427,7 @@ INCLUDE "engine/rtc/print_hours_mins.asm"
 INCLUDE "engine/pokedex/pokedex_3.asm"
 INCLUDE "engine/events/catch_tutorial_input.asm"
 INCLUDE "engine/pokegear/townmap_convertlinebreakcharacters.asm"
+INCLUDE "engine/pokemon/mail_2.asm"
 
 PokegearGFX:
 INCBIN "gfx/pokegear/pokegear.2bpp.lz"

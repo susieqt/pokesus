@@ -1,3 +1,10 @@
+;Coverted using MIDI2ASM
+;Code by TriteHexagon
+;Version 5.0.1 (7-Feb-2021)
+;Visit github.com/TriteHexagon/Midi2ASM-Converter for up-to-date versions.
+
+; ============================================================================================================
+
 Music_TinTower:
 	channel_count 4
 	channel 1, Music_TinTower_Ch1
@@ -6,287 +13,193 @@ Music_TinTower:
 	channel 4, Music_TinTower_Ch4
 
 Music_TinTower_Ch1:
-	tempo 208
 	volume 7, 7
-	duty_cycle 3
-	pitch_offset 4
-	vibrato 8, 4, 5
+	duty_cycle 2
+	note_type 12, 10, 7
+	tempo 201
 .mainloop:
-	stereo_panning TRUE, FALSE
-	note_type 12, 10, 5
-	octave 3
-	note G_, 4
-	note C_, 4
-	note G#, 8
-	note G_, 4
-	note C_, 4
-	octave 2
-	note A#, 2
-	octave 3
-	note C_, 2
-	note C#, 2
-	octave 2
-	note A#, 2
-	octave 3
-	note G_, 4
-	note C_, 4
-	note G#, 4
-	note F_, 4
-	note G_, 4
-	octave 2
-	note G_, 4
-	octave 3
-	note G_, 6
-	note A#, 2
-	note G_, 2
-	note F_, 2
-	note C#, 2
-	note G_, 2
-	note G#, 8
-	note G_, 4
+;Bar 1
+	rest 4
 	octave 4
-	note C_, 4
-	octave 3
-	note G#, 2
-	note G_, 2
+	volume_envelope 13, 7
+	note C_, 2
+	note D#, 2
 	note F_, 2
-	note G#, 2
-	note G_, 2
-	note C#, 2
-	octave 2
-	note A#, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 2
+	note C_, 6
 	octave 3
-	note G_, 2
-	note G#, 4
-	note F_, 4
-	note G_, 4
-	octave 2
-	note G_, 4
+	note A#, 1
+	octave 4
+	note D_, 1
+	note C_, 4
+	rest 8
+;Bar 3
+	note C_, 2 ; WARNING: Auto-Sync says: Rounded up!
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 4
+	note F#, 8
+	note F#, 1
+	note F_, 2
+	note D#, 1
+	note F#, 1
+	note F_, 2
+	note D#, 1 ; WARNING: Auto-Sync says: Rounded up!
+;Bar 5
+	rest 4
+	note C_, 2
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 6
+	note C_, 6
 	octave 3
-	note G_, 8
-	volume_envelope 10, 2
-	octave 2
-	note G_, 4
-	note G_, 12
-	note G_, 4
-	note G_, 8
-	volume_envelope 10, 7
-	note G_, 4
-	volume_envelope 10, 2
-	note G#, 4
-	note G#, 8
-	volume_envelope 10, 7
-	note G_, 4
-	volume_envelope 10, 2
-	note G#, 4
-	note G#, 8
-	volume_envelope 10, 7
-	note A#, 4
-	volume_envelope 10, 2
-	note G_, 4
-	note G_, 12
-	note G_, 4
-	note G_, 12
-	note G_, 4
-	note G_, 12
-	note G_, 4
-	note G_, 8
-	volume_envelope 10, 5
-	octave 3
-	note A#, 4
+	note A#, 1
+	octave 4
+	note D_, 1
+	note C_, 4
+	rest 8
+;Bar 7
+	note C_, 2
+	note D#, 2
+	note F_, 2
+	note F#, 2
+	note F_, 2
+	note D#, 2
+;Bar 8
+	note F#, 8
+	note F#, 1
+	note F_, 2
+	note D#, 1
+	note F#, 1
+	note F_, 2
+	note D#, 1
 	sound_loop 0, .mainloop
+
+; ============================================================================================================
 
 Music_TinTower_Ch2:
-	duty_cycle 3
-	pitch_offset 2
-	vibrato 24, 4, 4
+	duty_cycle 1
+	note_type 12, 10, 7
 .mainloop:
-	stereo_panning TRUE, TRUE
-.loop1:
-	note_type 12, 11, 5
-	octave 4
+;Bar 1
+	rest 16
+	rest 16
+	rest 16
+	rest 16
+;Bar 5
+	octave 2
+	volume_envelope 6, 7
 	note C_, 4
-	note C_, 4
-	note C#, 2
-	note C_, 2
-	octave 3
-	note A#, 2
-	octave 4
-	note C#, 2
-	note C_, 4
-	note F_, 4
-	note C#, 4
-	octave 3
-	note A#, 4
-	octave 4
-	note C_, 4
-	note C_, 4
-	note C#, 2
-	note C_, 2
-	octave 3
-	note A#, 2
-	octave 4
-	note C#, 2
-	note C_, 4
-	octave 3
-	note C_, 4
-	octave 4
-	note C_, 8
-	stereo_panning FALSE, TRUE
-	sound_loop 2, .loop1
-	volume_envelope 11, 2
-	octave 3
-	note C_, 4
-	note C_, 12
-	note C_, 4
-	note C_, 8
-	volume_envelope 11, 7
-	note C_, 4
-	volume_envelope 11, 2
-	note C#, 4
-	note C#, 8
-	volume_envelope 11, 7
-	note C_, 4
-	volume_envelope 11, 2
-	note C#, 4
-	note C#, 8
-	volume_envelope 11, 7
-	note D#, 4
-	volume_envelope 9, 0
-	stereo_panning TRUE, TRUE
-	note G_, 4
-	octave 4
-	note C_, 4
-	octave 3
-	note A#, 2
-	note G#, 2
-	note G_, 2
-	note G#, 2
-	note G_, 4
-	note C_, 4
-	note G_, 8
-	note G_, 4
-	octave 4
-	note C_, 4
-	octave 3
-	note A#, 2
-	octave 4
-	note C_, 2
-	note C#, 2
-	octave 3
-	note A#, 2
-	octave 4
-	note C_, 4
-	octave 3
-	note C_, 4
-	octave 4
+	rest 6
 	note C_, 6
-	volume_envelope 9, 5
-	note C#, 2
+;Bar 6
+	note C_, 4
+	rest 6
+	note C_, 3
+	octave 1
+	volume_envelope 4, 7
+	note A#, 1
+	note G_, 2
+;Bar 7
+	octave 2
+	volume_envelope 6, 7
+	note C_, 4
+	rest 6
+	note D#, 6
+;Bar 8
+	note F#, 4
+	volume_envelope 4, 7
+	note F#, 3
+	note F#, 1
+	rest 1
+	note F#, 1
+	volume_envelope 6, 7
+	note F#, 2
+	volume_envelope 4, 7
+	note D#, 2
+	note C_, 2
 	sound_loop 0, .mainloop
+
+; ============================================================================================================
 
 Music_TinTower_Ch3:
-	note_type 12, 1, 4
+	note_type 12, 1, 0
 .mainloop:
-	rest 16
-	rest 16
+;Bar 1
+	octave 3
+	volume_envelope 1, 0
+	note C_, 4
 	rest 16
 	rest 10
+;Bar 2
 	octave 2
 	note G_, 2
-	note G#, 2
-	note A#, 2
+;Bar 3
 	octave 3
-	note C_, 8
-	note C#, 8
-	note E_, 8
-	octave 2
-	note A#, 2
-	octave 3
-	note C_, 2
-	note C#, 2
-	note D#, 2
-	note C_, 8
-	note C#, 8
-	note E_, 8
+	note C_, 4
+	rest 16
+	rest 8
+;Bar 4
 	octave 4
-	note C_, 8
+	note C_, 4
+;Bar 5
 	octave 3
-	note C_, 1
-	rest 3
-	note C_, 1
-	rest 11
-	note C_, 1
-	rest 3
-	note C_, 1
-	rest 7
 	note C_, 4
-	note C#, 1
-	rest 3
-	note C#, 1
-	rest 7
-	note C_, 4
-	note C#, 1
-	rest 3
-	note C#, 1
-	rest 7
-	note D#, 4
-	stereo_panning FALSE, TRUE
-	note C_, 1
-	rest 3
-	note C_, 1
-	rest 11
-	note C_, 1
-	rest 3
-	note C_, 1
-	rest 3
-	stereo_panning TRUE, TRUE
+	rest 16
+	rest 10
+;Bar 6
 	octave 2
-	note A#, 2
+	note G_, 2
+;Bar 7
 	octave 3
-	note C_, 2
-	note C#, 2
-	note D#, 2
-	stereo_panning FALSE, TRUE
-	note C_, 1
-	rest 3
-	note C_, 1
-	rest 11
-	note C_, 1
-	rest 3
-	note C_, 1
-	rest 11
-	stereo_panning TRUE, TRUE
+	note C_, 4
+	rest 16
+	rest 8
+;Bar 8
+	octave 4
+	note C_, 4
 	sound_loop 0, .mainloop
 
+; ============================================================================================================
+
 Music_TinTower_Ch4:
-	toggle_noise 0
+	toggle_noise 1
 	drum_speed 12
 .mainloop:
-	stereo_panning FALSE, TRUE
+;Bar 1
+	drum_note 1, 4
+	rest 16
+	rest 10
+;Bar 2
 	drum_note 8, 2
-	stereo_panning TRUE, FALSE
-	drum_note 8, 1
-	drum_note 8, 1
-	stereo_panning FALSE, TRUE
+;Bar 3
+	drum_note 1, 4
+	rest 16
+	rest 8
+;Bar 4
+	drum_note 1, 4
+;Bar 5
+	drum_note 1, 4
+	rest 16
+	rest 10
+;Bar 6
 	drum_note 8, 2
-	stereo_panning TRUE, FALSE
-	drum_note 6, 4
-	stereo_panning FALSE, TRUE
-	drum_note 8, 2
-	drum_note 8, 2
-	drum_note 6, 2
-	stereo_panning TRUE, FALSE
-	drum_note 8, 2
-	stereo_panning FALSE, TRUE
-	drum_note 8, 1
-	drum_note 8, 1
-	stereo_panning TRUE, FALSE
-	drum_note 8, 2
-	stereo_panning FALSE, TRUE
-	drum_note 6, 4
-	stereo_panning TRUE, FALSE
-	drum_note 8, 2
-	drum_note 8, 2
-	drum_note 6, 2
+;Bar 7
+	drum_note 1, 4
+	rest 16
+	rest 8
+;Bar 8
+	drum_note 1, 4
 	sound_loop 0, .mainloop
+
+; ============================================================================================================
+
